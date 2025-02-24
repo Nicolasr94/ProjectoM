@@ -1,0 +1,37 @@
+.header-container {
+    background-color: rgb(73, 73, 73);
+    width: 100%;
+}
+
+.header-section-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.header-section-list {
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   background-color: #8d75c6;
+   width: 100%;
+}
+
+.header-section-list li {
+    height: 30px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton',sans-serif;
+    color: white;
+}
+
+.header-section-list li:hover{
+    background-color: #efc03b;
+ }
+
+.container-div {
+    width: 100%;
+}

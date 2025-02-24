@@ -1,26 +1,31 @@
 import { Outlet } from "react-router"
+import "./Layout.css"
+import logo from '../asset/logo-fundacion.png';
+
 export default function Layout(){
-    return <div className="Layout">
+    return <div className="container-div">
     <header>
-        <h1>Projecto de gestión</h1>
-        <nav className="HeaderNav">
-            <ul className="HeaderList">
-            <a href="/">
-                <li className="HeaderLi">
-                Inicio
-                </li>
-                </a>
-                <a href="/addForm">
-                <li className="HeaderLi">Ingresar visita</li>
-                </a>
-                <a href="/AddFormVolunteer">
-                <li className="HeaderLi">Ingresar voluntario</li>
-                </a>
-                <a href="/ShowData">
-                <li className="HeaderLi">Registros</li>
-                </a>
-            </ul>
-        </nav>
+        <div className="header-container">
+            <img src={logo} alt="" />
+            <nav className="header-section-nav">
+                <ul className="header-section-list">
+                <a href="/">
+                    <li className="header-section-li">
+                    Inicio
+                    </li>
+                    </a>
+                    <a href="/addForm">
+                    <li className="">Ingresar visita</li>
+                    </a>
+                    <a href="/AddFormVolunteer">
+                    <li className="">Ingresar voluntario</li>
+                    </a>
+                    <a href="/ShowData">
+                    <li className="">Registros</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>

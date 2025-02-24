@@ -1,0 +1,285 @@
+.Layout {
+  width: 100%;
+  height: 100%;
+  background-color:  rgb(255, 255, 255);
+}
+
+.HeaderNav{
+  display: grid;
+  grid-template-columns: 1fr ;
+
+}
+
+.HeaderList{
+  display: grid;
+  font-size: 1.2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items:center;
+  min-width: max-content;
+  list-style: none;
+}
+
+.HeaderList li{
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(51, 92, 170);
+  height: 2.2rem;
+  width: 10rem;
+  border: .2px solid black;
+}
+
+
+
+.HeaderLi:hover{
+  background-color: #8a79f8;
+  box-shadow: 3px 3px 6px #000000;
+}
+
+.HeaderLi:active{
+  background-color: #8a79f8;
+  box-shadow: 2px 2px 3px #000000;
+  transform: scale(1.02);
+}
+header{
+  height: 15vh;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+h1{
+  margin-bottom: 2rem;
+}
+
+/* TERMINA HEADER  */
+
+
+/* Empieza vista HOME */
+.Home{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.Home p{
+  font-size: 1.5rem;
+}
+
+.Home div{
+  height: auto;
+  width: auto;
+  text-align: justify;
+}
+
+
+a{
+  text-decoration: none;
+  color: whitesmoke;
+} 
+
+
+
+/* Empieza vista SHOW DATA */
+
+.layoutCards{
+  display: grid;
+  width: 100vw;
+  margin-top: 5rem;
+  padding: 10px;
+  grid-template-columns: 33% 33% 33%;
+  place-items:center;
+  gap: 1rem;
+  border: 1px solid black;
+}
+
+.layoutCards div{    
+  display:grid;
+  grid-template-columns:1fr;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  height: auto; 
+  border: 2px solid black;
+  text-align: left;
+  font-size: large;
+}
+
+
+.filterNav{
+  font-size: 1.8rem;
+  width: 20rem;
+  margin: auto; 
+  margin-bottom: 30px;
+}
+
+.filterNav select{
+  font-size: 1.2rem;
+  height: 2.2rem;
+  width: 8rem;
+  text-align: center;
+  border: .2px solid black;
+  background-color: rgb(51, 92, 170);
+  color:white;
+}
+
+
+
+.filterNav input{
+  font-size: 1.2rem;
+  width: 20rem;
+  height: 2rem; 
+}
+
+.filterH2{
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration:underline;
+}
+
+.wrapperNavFilters{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  align-content: space-around;
+  height: 8rem;
+}
+
+.wrapperFilter{
+  display: grid;
+  margin: auto;
+
+}
+
+.wrapperFilter label{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.wrapperFilter select{
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(90, 84, 171);
+}
+
+.wrapperFilter input{
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.showData-h1{
+  margin: auto;
+}
+
+
+@media (max-width: 600px) {
+  .layoutCards{
+    display: grid;
+    width: 100vw;
+    margin-top: 5rem;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    place-items:center;
+    gap: 1rem;
+    border: 1px solid black;
+  }
+  .filterNav{
+    font-size: 1.8rem;
+    width: 1rem;
+    margin: auto; 
+    margin-bottom: 30px;
+  }
+  
+  .filterNav select{
+    font-size: 1.2rem;
+    height: 2.2rem;
+    width: 3rem;
+    text-align: center;
+    border: .2px solid black;
+    background-color: rgb(51, 92, 170);
+    color:white;
+  }
+  
+  
+  
+  .filterNav input{
+    font-size: 1.2rem;
+    width: 20rem;
+    height: 2rem; 
+  }
+  
+  .filterH2{
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration:underline;
+  }
+  
+  .wrapperNavFilters{
+    display: grid;
+    grid-template-columns: 1fr  ;
+    align-content: space-around;
+    height: max-content;
+    gap: 50px;
+  }
+
+  .wrapperNavFilters{
+  display: grid;
+    grid-template-columns: 1fr  ;
+    align-content: space-around;
+    height: max-content;
+    gap: 50px;
+  }
+  
+  .wrapperFilter{
+    display: grid;
+    margin: auto;
+  
+  }
+  #wrapperFilter1{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  
+  }
+  
+  .wrapperFilter label{
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .wrapperFilter select{
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(90, 84, 171);
+  }
+  
+  .wrapperFilter input{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }   
+
+  header{
+    height: auto;
+
+  }
+
+  .HeaderNav{
+    height: 7rem;
+  }
+  .HeaderList{
+    display: grid;
+    font-size: 1.2rem;
+    grid-template-columns: 1fr 1fr ;
+    gap: 10px;
+    height: 5rem;
+    place-items:center;
+    min-width: max-content;
+    list-style: none;
+  }
+  
+}

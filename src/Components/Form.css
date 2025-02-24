@@ -1,0 +1,53 @@
+.wrapperForm{
+    height: min-content;
+    width: 30rem;
+    min-width:15rem;
+    margin: auto;
+    padding-top: 3rem;
+   
+}
+
+.form{
+    display: grid;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+    grid-template-rows:repeat(6,1fr);
+    place-items: center;
+}
+
+.form label{
+   font-size: 1.4rem;
+   width: max-content;
+}
+
+.form input{
+width: 20rem;
+height: 2rem;
+margin-bottom: 8px;
+font-size: 1.4rem;
+}
+
+.btnSubmit{
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(51, 92, 170);
+    height: 2.2rem;
+    width: 10rem;
+    border: .2px solid black;
+    color:white;
+    font-size: 1.4rem;
+}
+
+.btnSubmit:hover{
+    background-color: #8a79f8;
+    box-shadow: 3px 3px 6px #000000;
+    transform: scale(1.02);
+}
+
+.btnSubmit:active{
+    background-color: #8a79f8;
+    box-shadow: 3px 3px 6px #000000;
+    transform: scale(1.02);
+}
+

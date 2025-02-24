@@ -1,4 +1,37 @@
-.wrapperForm{
+@font-face {
+    font-family: 'Aracne Condensed Regular Condensed Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Aracne Condensed Regular Condensed Regular'), url('../font/ARACNE-CONDENSED_regular.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Aracne Condensed Regular Italic Condensed Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Aracne Condensed Regular Italic Condensed Regular'), url('../font/ARACNE-CONDENSED_regular.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Aracne Condensed Light Condensed Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Aracne Condensed Light Condensed Light'), url('../font/ARACNE-CONDENSED_regular.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Aracne Condensed Light Italic Condensed Light Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Aracne Condensed Light Italic Condensed Light Italic'), url('../font/ARACNE-CONDENSED_regular.woff') format('woff');
+}
+
+/* FORMLARIO NUEVO */
+
+.container{
     height: min-content;
     width: 30rem;
     min-width:15rem;
@@ -7,47 +40,63 @@
    
 }
 
-.form{
-    display: grid;
-    padding: 10px;
-    border: 2px solid black;
-    text-align: center;
-    grid-template-rows:repeat(6,1fr);
-    place-items: center;
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 1.2rem;
 }
 
-.form label{
-   font-size: 1.4rem;
-   width: max-content;
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border: #b8b8b8 1px solid;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    width: 700px;
+    padding: 10px 10px 10px 10px;
+    margin-top: 0px;
 }
 
-.form input{
-width: 20rem;
-height: 2rem;
-margin-bottom: 8px;
-font-size: 1.4rem;
-}
+.form-container h2{
+    background-color: #01b7af;
+    font-size: 1.8rem;  
+    font-family:'Aracne Condensed Regular Condensed Regular';
+    font-weight: 550;
+    color: #fefefe;
+    width: max-content;
+    margin-bottom: -20px;
+    margin-left: -110px;
+    width: 700px;
+    padding-left: 10px ;
+ }
 
-.btnSubmit{
-    text-align: center;
-    padding: 5px;
-    background-color: rgb(51, 92, 170);
-    height: 2.2rem;
-    width: 10rem;
-    border: .2px solid black;
-    color:white;
-    font-size: 1.4rem;
-}
+ .form-container label{
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: #6f6f6f;
+    font-weight: 300;
+    width: max-content;
+ }
 
-.btnSubmit:hover{
-    background-color: #8a79f8;
-    box-shadow: 3px 3px 6px #000000;
-    transform: scale(1.02);
-}
+ .form-container select, input{
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 1.2rem;
+    color: #6f6f6f;
+    font-weight: 300;
+    width: 100%;
+ }
 
-.btnSubmit:active{
-    background-color: #8a79f8;
-    box-shadow: 3px 3px 6px #000000;
-    transform: scale(1.02);
-}
-
+ .form-container button{
+    font-family:'Aracne Condensed Regular Condensed Regular';
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 550;
+    width: 50%;
+    background-color: #ef2161!important;
+    border: #ef2161;
+    align-self: center;
+    height: fit-content;
+ }

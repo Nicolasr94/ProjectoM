@@ -68,14 +68,15 @@ export const getOne = async (docRef,id) => {
 
   }
 
-  export const addCardAndRef = async (data,doc) => {
-    console.log("LLego aca")
-    console.log(data.idVolunteer)
-    const volunteerRef = db.collection('volunteers').doc(data.idVolunteer); 
+  export const addCardAndRef = async (data,docName) => {
     try {
-      await addDoc(collection(db, doc), {...data,
+      const idRef = data.idVolunteer
+      console.log(idRef)
+      const voluntarioRef = doc(collection(db, "volunteers"), idRef)
+      await addDoc(collection(db, docName), {
+        ...data,
           date:serverTimestamp(),
-          volunteerRef:volunteerRef
+          volunteerId:voluntarioRef,
       });
       console.log("La carga de datos fue un éxito");
   } catch (error) {
@@ -87,10 +88,9 @@ export const getOne = async (docRef,id) => {
   
   export const addCard = async (data,doc) => {
   try {
-    await addDoc(collection(db, doc), {...data,
-        date:serverTimestamp()
-    });
+    await addDoc(collection(db, doc),data);
     console.log("La carga de datos fue un éxito");
+    console.log(data)
 } catch (error) {
     console.error("Error en la carga de datos:", error); 
 }

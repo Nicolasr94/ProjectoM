@@ -1,6 +1,6 @@
 .header-container {
     background-color: rgb(73, 73, 73);
-    width: 100%;
+    width:100vw;
 }
 
 .header-section-nav {
@@ -34,4 +34,10 @@
 
 .container-div {
     width: 100%;
+}
+
+@media (min-width: 300px) and (max-width: 950px) {
+  .header-section-list li {
+    width: 140px;
+}
 }

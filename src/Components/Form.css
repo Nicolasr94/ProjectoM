@@ -102,7 +102,6 @@
  }
 
 
-/*  Estilos para el contenedor de los checkboxes */
  .checkbox-container {
      display: flex;
      align-items: center;
@@ -115,14 +114,13 @@
      -moz-appearance: none;
      width: 20px;
      height: 20px;
-     border: 2px solid #008080; /* Color del borde */
+     border: 2px solid #008080; 
      border-radius: 4px;
      margin-right: 10px;
      cursor: pointer;
      position: relative;
  }
  
- /* Estilo para el estado marcado del checkbox */
  .checkbox-container input[type="checkbox"]:checked {
      background-color: #008080; 
  }
@@ -141,3 +139,55 @@
      font-size: 16px;
      cursor: pointer;
  }
+
+
+ @media (min-width: 300px) and (max-width: 950px) {
+    .container{
+        width: 10rem;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: 1.2rem;
+    }
+    
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        border: #b8b8b8 1px solid;
+        border-top: none;
+        border-radius: 0 0 6px 6px;
+        width: 25rem;
+        padding: 10px 10px 10px 10px;
+        margin-top: 0px;
+    }
+    
+    .form-container h2{
+        background-color: #01b7af;
+        font-size: 1.8rem;  
+        font-family:'Aracne Condensed Regular Condensed Regular';
+        font-weight: 550;
+        color: #fefefe;
+        width: min-content;
+        margin-bottom: -20px;
+        margin-left: -80px;
+        width: 25rem;
+        padding-left: 10px ;
+     }
+
+     
+ .form-container select, input{
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 1.2rem;
+    color: #6f6f6f;
+    font-weight: 300;
+    width: 100%;
+ }
+
+ .form-container select{
+    width: 68%;
+ }
+  }

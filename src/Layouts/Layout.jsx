@@ -14,9 +14,6 @@ export default function Layout(){
                     Inicio
                     </li>
                     </a>
-                    <a href="/addForm">
-                    <li className="">Ingresar visita</li>
-                    </a>
                     <a href="/AddFormVolunteer">
                     <li className="">Ingresar voluntario</li>
                     </a>

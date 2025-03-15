@@ -6,6 +6,7 @@ import {FormSectionProjects} from "../Components/FormSectionProjects.jsx"
 import { useState,useEffect } from "react";
 import {Provincias} from '../Data/Provincias.js';
 import {ToastContainer, toast} from "react-toastify"
+import { sortData } from "../Data/sortData.js";
 
 const URL_FETCH_CIUDAD = "https://apis.datos.gob.ar/georef/api/localidades?provincia=";
 
@@ -19,7 +20,8 @@ function validarFormulario(formData) {
     return true;
   }
 
-  
+
+
   export default function FormVolunteer() {
    
     
@@ -86,18 +88,24 @@ function validarFormulario(formData) {
         if(provincia == "" ){
             console.log("No esta completa la query")
         }else{
-
+            let dataSort=[];
             fetch(URL_FETCH_CIUDAD.concat(provincia).concat("&max=500"),{method:"GET"})
             .then((res) =>res.json())
-            .then((data) =>  setCiudades(data.localidades))
+            .then((data) =>{
+                dataSort = Object.values(data.localidades).map((e)=>({id:e.id,nombre:e["nombre"]}))
+                sortData(dataSort)
+                setCiudades(dataSort)
+            })
+            } 
             
         }
-    }
+    
 
     
     useEffect(()=>{
         try{
             fetchCiudades(form.provincia);
+         
         }catch(e){
             console.error(e)
         }
@@ -165,5 +173,4 @@ function validarFormulario(formData) {
     );
 }
 
-  
   
